@@ -1,9 +1,9 @@
 Facebook Connect PHP login
 Written by: Alex Manelis <amanelis@gmail.com>
 
-Edit line 7, 8, 11, and 103, with your facebook, secret
-credentials. On line 11, be sure that it looks like 
-this:
+Edit line 7, 8, 11, and 103, on fbconnect.php with 
+your facebook, secret credentials. 
+On line 11, be sure that it looks like this:
 
 line 11
 before: $fb_user_cookie = $_COOKIE['YOURKEY_user'];
@@ -19,4 +19,8 @@ a database query. You should configure or include
 your database file on the top near the facebook include.
 I stored the user id on the users that logged in on my
 site, this way when they come back or are new users,
-the site knows how to handle them. 
+the site knows how to handle them.
+
+Not sure where I found the fbconnect.js, but for this project
+you do not need it. I included it because it is helpfull,
+but for the project fbconnect.php is what is needed. 
