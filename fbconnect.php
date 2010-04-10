@@ -1,3 +1,4 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
 <?PHP
 //Kill error reporting, just in case...
 ini_set("error_reporting",0);
@@ -21,27 +22,13 @@ try {
 
 //if fb user is null or cookie is null show login button
 if(!$fb_uid || !$fb_user_cookie){
-	$page = $_SERVER['PHP_SELF'];
-	
-	if($page == '/index.php'){ 
-?>
-	<a href="#" onclick="FB.Connect.requireSession(function() { window.location='/index.php'; }); return false;">
-		<img id="fb_login_image" src="img/fb-connect-large.png" alt="Connect" />
-	</a>
-<?
-	} else {
 ?>
 	<div id="user">
 		<fb:login-button length="long" onlogin="refresh_page();"></fb:login-button>
 	</div>
 <?	
-	}
 } else {
 	if(isset($fb_uid)){
-		//This checks to see if this is first time fb users, you should have your db already connected at this point
-		$q_check_user = "SELECT fb_uid, school, logins, plogin, points FROM fbusers WHERE fb_uid = '$fb_uid'";
-		$check_user_result = mysql_query($q_check_user);
-		$check_user_num_rows = mysql_num_rows($check_user_result);
 		
 		//Grab the facebook first_name, last_name.....etc..
 		$fb_lname = $facebook->api_client->users_getStandardInfo($fb_uid,'last_name');
@@ -73,6 +60,12 @@ if(!$fb_uid || !$fb_user_cookie){
 		$f_today = date("Y-m-d");
 		$f_ip = $_SERVER['REMOTE_ADDR'];
 		
+		//This checks to see if this is first time fb users, you should have your db already connected at this point
+		$q_check_user = "SELECT fb_uid, school, logins, plogin, points FROM fbusers WHERE fb_uid = '$fb_uid'";
+		$check_user_result = mysql_query($q_check_user);
+		$check_user_num_rows = mysql_num_rows($check_user_result);
+		mysql_free_result($check_user_result);		
+
 		//if no matching rows in query, NEW USER, grab values and send to a register form.
 		if($check_user_num_rows == 0 ){
 			?>
