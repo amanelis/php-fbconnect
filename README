@@ -1,7 +1,7 @@
 Facebook Connect PHP login
 Written by: Alex Manelis <amanelis@gmail.com>
 
-Edit line 8, 9, 12,, and 96, on fbconnect.php with 
+Edit line 8, 9, 12, and 96, on fbconnect.php with 
 your facebook, secret credentials. 
 On line 12, be sure that it looks like this:
 
