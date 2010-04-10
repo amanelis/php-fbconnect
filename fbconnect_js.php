@@ -9,6 +9,7 @@
 <fb:login-button v="2" size="medium" onlogin="window.location.reload(true);">Connect with Facebook</fb:login-button><br /><br />
 <fb:profile-pic uid="loggedinuser" size="square" facebook-logo="true"></fb:profile-pic><br /><br />
 <fb:name uid="loggedinuser" useyou="false" linked="true"></fb:name><br /><br />
+<fb:prompt-permission perms="read_stream,publish_stream">Would you like our application to read from and post to your News Feed?</fb:prompt-permission>
 <fb:share-button class="url" href="http://rathersaur.us/" type="button_count"></fb:share-button><br /><br />
 <fb:comments> </fb:comments><br /><br />
 
