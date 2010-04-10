@@ -26,13 +26,8 @@ function callPublish(msg, attachment, action_link) {
 
 
 
-
-
-
-
-
 <script src="http://static.ak.connect.facebook.com/connect.php/en_GB" type="text/javascript"></script>
 <script src="http://static.ak.connect.facebook.com/connect.php/en_GB" type="text/javascript"></script>
-<script type="text/javascript">FB.init("212413c9ac9f08bd750dc9cccdc42285");</script>
+<script type="text/javascript">FB.init("YOUR KEY");</script>
 </BODY>
 </HTML>
