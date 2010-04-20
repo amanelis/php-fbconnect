@@ -1,4 +1,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+	<title>Facebook Connect PHP</title>
+</head>
+<body>
+
 <?PHP
 //Kill error reporting, just in case...
 ini_set("error_reporting",0);
@@ -95,3 +100,5 @@ function refresh_page(){
 }
 FB.init("YOURKEY","xd_receiver.htm");
 </script>
+</body>
+</html>
