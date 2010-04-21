@@ -28,7 +28,7 @@ the bottom of the page and you are ready to go.
 
 IMPLEMENTATION:
 ************************************************
-You can use this file (connect.php) as a header.php on the top of your page
+You can use connect.php as a header.php on the top of your page
 to ensure facebook login. Once logged in you can display data
 based on $fb_uid isset. Since this page either displays the 
 fb login button or the welcome message this page can be your 
