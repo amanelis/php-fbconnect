@@ -1,4 +1,3 @@
-
 /*
  * The facebook_onload statement is printed out in the PHP. If the user's logged in
  * status has changed since the last page load, then refresh the page to pick up
@@ -103,3 +102,4 @@ function facebook_show_feed_checkbox() {
         });
     });
 }
+

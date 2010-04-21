@@ -1,12 +1,19 @@
 <?PHP
-//Kill error reporting, just in case...
-ini_set("error_reporting",0);
+//Kill error reporting, just in case, must be on PHP 5
+//found some erros in facebook-client/facebook.php that
+//in some versions of PHP produce errors, but code will
+//work on execution
+ini_set("error_reporting", 0);
 require_once 'facebook-client/facebook.php'; 
 
 //our key and secret, create new Facebook api object
 $appapikey = 'YOURKEY'; 
 $appsecret = 'YOURSECRET'; 
 $facebook = new Facebook($appapikey, $appsecret);
+
+//This is the main variable that will store the facebook's user id
+//important variable you can use throughout your application to reference
+//facebook user id
 $fb_uid = $facebook->get_loggedin_user();
 
 //only change the exact text 'YOURKEY' with your key, you must leave on the _user
@@ -23,6 +30,7 @@ try {
     $facebook->set_user(null, null);
 }
 ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
     <title>Facebook Connect PHP</title>
