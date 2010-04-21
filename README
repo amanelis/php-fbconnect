@@ -25,3 +25,11 @@ in my database is 'fb_uid'
 The easiest file to get rolling with is the javascripts/index.html, 
 all you need to do is input your key in the FB.init js function at
 the bottom of the page and you are ready to go.
+
+IMPLEMENTATION:
+************************************************
+You can use this file as a header.php on the top of your page
+to ensure facebook login. Once logged in you can display data
+based on $fb_uid isset. Since this page either displays the 
+fb login button or the welcome message this page can be your 
+login include file.
