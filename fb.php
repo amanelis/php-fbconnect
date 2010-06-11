@@ -1,3 +1,4 @@
+<?PHP
 require_once 'facebook.php'; 
 require_once 'facebookapi_php5_restlib.php'; 
 $appapikey = '{YOUR API KEY HERE}'; 
@@ -18,3 +19,4 @@ $userName = $userInfo[0]['name'];
 // $userName now contains user's name. 
 
 }
+?>
