@@ -1,6 +1,6 @@
-<?PHP
-require_once 'facebook.php'; 
-require_once 'facebookapi_php5_restlib.php'; 
+<?php
+require_once 'facebook-client/facebook.php'; 
+require_once 'facebook-client/facebookapi_php5_restlib.php'; 
 $appapikey = '{YOUR API KEY HERE}'; 
 $appsecret = '{YOUR APPLICATION SECRET KEY HERE}'; // do this after validation 
 
